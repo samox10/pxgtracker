@@ -1,0 +1,228 @@
+.container {
+  padding: 40px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #1a202c;
+}
+
+.formBox {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.inputGroup label {
+  font-weight: bold;
+  color: #4a5568;
+  font-size: 14px;
+}
+
+.input, .select {
+  padding: 10px;
+  border: 1px solid #cbd5e0;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.row {
+  display: flex;
+  gap: 20px;
+}
+
+.row > div {
+  flex: 1;
+}
+
+.sectionTitle {
+  margin-top: 20px;
+  border-bottom: 2px solid #edf2f7;
+  padding-bottom: 10px;
+  color: #2d3748;
+}
+
+.btnSubmit {
+  background-color: #3182ce;
+  color: white;
+  border: none;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.btnSubmit:hover {
+  background-color: #2b6cb0;
+}
+/* Adicione isso no final do seu page.module.css */
+
+.crystalBox {
+  background-color: #faf5ff; /* Roxinho bem claro */
+  border: 1px solid #d6bcfa;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.crystalBox label {
+  color: #553c9a;
+  font-weight: bold;
+}
+.shinySpecific {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #d69e2e; /* Dourado */
+  font-weight: bold;
+}
+
+.shinyIcon {
+  font-size: 20px;
+}
+.lootGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.extraItemRow {
+  display: flex;
+  gap: 10px;
+  align-items: flex-end;
+  margin-bottom: 15px;
+  background-color: #f7fafc;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px dashed #cbd5e0;
+}
+
+.extraItemRow > div:first-child {
+  flex: 2; /* O campo de nome fica maior */
+}
+
+.extraItemRow > div:nth-child(2) {
+  flex: 1; /* O campo de quantidade fica menor */
+}
+
+.btnRemove {
+  background-color: #fc8181;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-weight: bold;
+  height: 40px; /* Mesma altura do input */
+}
+
+.btnRemove:hover {
+  background-color: #e53e3e;
+}
+
+.btnAddExtra {
+  background-color: transparent;
+  color: #3182ce;
+  border: 2px dashed #3182ce;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  width: 100%;
+  transition: all 0.2s;
+}
+
+.btnAddExtra:hover {
+  background-color: #ebf8ff;
+}
+/* Adicione no final do page.module.css */
+
+.gastosToggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 30px;
+  padding: 15px;
+  background-color: #fffaf0; /* Laranjinha bem claro */
+  border: 1px solid #feebc8;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.gastosToggle:hover {
+  background-color: #feebc8;
+}
+
+.gastosToggle label {
+  font-weight: bold;
+  color: #c05621;
+  cursor: pointer;
+  flex: 1;
+}
+
+.gastosBox {
+  background-color: #fffaf0;
+  padding: 20px;
+  border-radius: 0 0 8px 8px;
+  border: 1px solid #feebc8;
+  border-top: none;
+  margin-top: -5px; /* Para grudar no botão Toggle */
+}
+
+.mortesLabel {
+  color: #e53e3e !important; /* Vermelho para dar destaque negativo à morte */
+  font-weight: bold;
+}
+/* Adicione no final do page.module.css */
+
+.gastoRow {
+  display: flex;
+  gap: 10px;
+  align-items: flex-end;
+  margin-bottom: 15px;
+  background-color: white;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px dashed #fbd38d;
+}
+
+.gastoRow > div:nth-child(1) { flex: 1; } /* Categoria */
+.gastoRow > div:nth-child(2) { flex: 2; } /* Nome do Item */
+.gastoRow > div:nth-child(3) { flex: 1; } /* Quantidade */
+
+.btnAdicionarGasto {
+  background-color: transparent;
+  color: #dd6b20;
+  border: 2px dashed #dd6b20;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  width: 100%;
+  transition: all 0.2s;
+  margin-bottom: 20px;
+}
+
+.btnAdicionarGasto:hover {
+  background-color: #feebc8;
+}

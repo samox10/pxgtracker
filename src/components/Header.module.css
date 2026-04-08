@@ -1,0 +1,80 @@
+.header {
+  /* Background CSS: Degradê moderno e escuro */
+  background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 0 40px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+  /* Isso faz o menu ficar grudado no topo mesmo se rolar a página para baixo */
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* --- LOGO FULL CSS --- */
+.logoContainer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none; /* Tira o sublinhado do link */
+}
+
+/* Desenhando um formato arredondado bicolor com CSS */
+.logoSymbol {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: linear-gradient(to bottom, #e53e3e 50%, #ffffff 50%);
+  border: 2px solid #cbd5e0;
+  position: relative;
+  box-shadow: 0 0 10px rgba(229, 62, 62, 0.4);
+}
+
+/* O "botão" do meio da logo usando pseudo-elemento */
+.logoSymbol::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  background-color: #ffffff;
+  border: 2px solid #cbd5e0;
+  border-radius: 50%;
+}
+
+.logoText {
+  font-size: 24px;
+  font-weight: 900;
+  color: white;
+  letter-spacing: 1px;
+}
+
+.logoHighlight {
+  color: #fbd38d; /* Dourado para dar contraste */
+}
+
+/* --- LINKS DE NAVEGAÇÃO --- */
+.nav {
+  display: flex;
+  gap: 30px;
+}
+
+.navLink {
+  color: #e2e8f0;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  transition: all 0.2s;
+}
+
+/* Efeito ao passar o mouse por cima (Hover) */
+.navLink:hover {
+  color: #fbd38d;
+  text-shadow: 0 0 8px rgba(251, 211, 141, 0.4);
+  transform: translateY(-2px);
+}

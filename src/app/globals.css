@@ -1,0 +1,16 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  /* Fundo base escuro e suave (não é preto puro) */
+  background-color: #17181a; 
+  /* Mágica do CSS: Criando os pontinhos sutis */
+  background-image: radial-gradient(#30343a 1.5px, transparent 1.5px);
+  background-size: 22px 22px; /* Espaçamento dos pontinhos */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}

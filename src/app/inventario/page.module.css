@@ -1,0 +1,364 @@
+.container {
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #1a202c;
+}
+
+/* Estilo do Menu de Abas */
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.tabButton {
+  background: none;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #718096;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  transition: all 0.2s;
+}
+
+.tabButton:hover {
+  color: #2b6cb0;
+}
+
+.activeTab {
+  color: #2b6cb0;
+  border-bottom: 3px solid #2b6cb0;
+}
+
+/* Grid onde os itens vão aparecer */
+.itemGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+/* O cartão de cada item */
+.itemCard {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+  transition: transform 0.2s;
+}
+
+.itemCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.itemImage {
+  width: 64px; /* Largura padrão */
+  height: 64px; /* Altura padrão */
+  margin: 0 auto 15px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Isso é só para caso a imagem não carregue, ter um fundo cinza */
+  background-color: #edf2f7; 
+  border-radius: 8px;
+}
+
+/* O segredo para não distorcer as imagens .png ou .gif */
+.itemImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Faz a imagem caber certinho sem esticar */
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.1)); /* Dá uma sombra 3D bonita no item */
+}
+
+.itemName {
+  font-weight: bold;
+  color: #2d3748;
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+.itemQuantity {
+  font-size: 18px;
+  font-weight: bold;
+  color: #38a169;
+}
+
+.suplementoQuantity {
+  color: #dd6b20; /* Cor diferente para quantidades de suplementos */
+}
+
+.itemValue {
+  font-size: 12px;
+  color: #a0aec0;
+  margin-top: 10px;
+}
+
+.totalWealth {
+  background-color: #ebf8ff;
+  border: 1px solid #bee3f8;
+  color: #2b6cb0;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+/* Transformar o cartão de loot em algo clicável */
+.itemCardLoot {
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.itemCardLoot:hover {
+  border-color: #3182ce;
+  background-color: #ebf8ff;
+}
+
+/* --- ESTILOS DO MODAL DE VENDA --- */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; /* Fica por cima de tudo */
+  padding: 20px;
+}
+
+.modalContent {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  position: relative;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.closeButton {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  color: #a0aec0;
+  cursor: pointer;
+}
+
+.closeButton:hover {
+  color: #e53e3e;
+}
+
+/* Estilos do Formulário dentro do Modal */
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.inputGroup label {
+  font-weight: bold;
+  color: #4a5568;
+  font-size: 14px;
+}
+
+.input {
+  padding: 10px;
+  border: 1px solid #cbd5e0;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.radioGroup {
+  display: flex;
+  gap: 15px;
+}
+
+.radioLabel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  padding: 10px;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  flex: 1;
+}
+
+.radioInput {
+  width: 18px;
+  height: 18px;
+  accent-color: #3182ce;
+}
+
+.reciboBox {
+  background-color: #f7fafc;
+  border: 1px dashed #cbd5e0;
+  padding: 15px;
+  border-radius: 6px;
+  margin-top: 15px;
+}
+
+.reciboLinha {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #4a5568;
+}
+
+.reciboTaxa {
+  color: #e53e3e;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 8px;
+}
+
+.reciboTotal {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #38a169;
+}
+
+.btnSubmit {
+  background-color: #38a169;
+  color: white;
+  border: none;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.btnSubmit:hover {
+  background-color: #2f855a;
+}
+.headerLoot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.btnVendaMassa {
+  background-color: #ecc94b;
+  color: #744210;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btnVendaMassa:hover {
+  background-color: #d69e2e;
+}
+
+/* Quando o item está selecionado no modo massa */
+.itemCardSelected {
+  border-color: #38a169 !important;
+  background-color: #f0fff4 !important;
+  transform: translateY(-5px);
+  position: relative;
+}
+
+.checkMark {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: #38a169;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Barra flutuante que aparece no fundo da tela */
+.floatingActionBar {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #2d3748;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  z-index: 500;
+  animation: slideUp 0.3s ease-out;
+}
+
+.floatingText {
+  font-size: 16px;
+}
+
+.floatingValue {
+  font-size: 22px;
+  font-weight: bold;
+  color: #68d391;
+}
+
+.btnConfirmMass {
+  background-color: #38a169;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btnConfirmMass:hover {
+  background-color: #2f855a;
+}
+
+.btnCancelMass {
+  background-color: transparent;
+  color: #fc8181;
+  border: 1px solid #fc8181;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btnCancelMass:hover {
+  background-color: rgba(252, 129, 129, 0.1);
+}
+
+@keyframes slideUp {
+  from { bottom: -100px; opacity: 0; }
+  to { bottom: 30px; opacity: 1; }
+}

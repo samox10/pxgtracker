@@ -1,0 +1,220 @@
+/* src/app/page.module.css */
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #202124;
+  color: #E8EAED;
+  min-height: 100vh;
+}
+
+.headerDashboard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 35px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #3C4043;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #E8EAED;
+  letter-spacing: -0.5px;
+}
+
+.monthFilter {
+  display: flex;
+  align-items: center;
+}
+
+.monthInput {
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: 1px solid #3C4043;
+  background-color: #292A2D;
+  color: #E8EAED;
+  font-size: 14px;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.monthInput:focus {
+  border-color: #81C995;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.statCard {
+  background-color: #292A2D;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #3C4043;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.statTitle {
+  font-size: 12px;
+  font-weight: 500;
+  color: #9AA0A6;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+.statValue {
+  font-size: 24px;
+  font-weight: 600;
+  color: #E8EAED;
+}
+
+.textProfit { color: #81C995 !important; }
+.textLoss { color: #F28B82 !important; }
+
+.historySection {
+  background-color: #292A2D;
+  border-radius: 8px;
+  border: 1px solid #3C4043;
+  padding: 20px;
+}
+
+.sectionTitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: #E8EAED;
+  margin-bottom: 15px;
+  padding-left: 5px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.table thead th {
+  text-align: left;
+  padding: 12px 15px;
+  color: #9AA0A6;
+  font-weight: 500;
+  font-size: 12px;
+  border-bottom: 1px solid #3C4043;
+}
+
+.table tbody tr {
+  transition: background-color 0.15s;
+  border-bottom: 1px solid #3C4043;
+}
+
+.table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.table tbody td {
+  padding: 14px 15px;
+}
+
+.clickableRow { cursor: pointer; }
+.clickableRow:hover { background-color: #35363A; }
+
+/* A MÁGICA DO ALINHAMENTO AQUI */
+.centerColumn { text-align: center !important; }
+
+.totalDiaRow {
+  background-color: #202124 !important;
+  border-bottom: 2px solid #3C4043 !important;
+}
+
+.totalDiaRow td {
+  padding: 10px 15px !important;
+}
+
+.totalDiaValue {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.pokemonCell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.pokemonSprite {
+  width: 32px; height: 32px;
+  display: flex; justify-content: center; align-items: center;
+}
+
+.pokemonName {
+  font-weight: 500;
+  color: #E8EAED;
+}
+
+.shinyCell {
+  display: flex; align-items: center; justify-content: center; gap: 6px;
+}
+
+.shinyCount { font-weight: 600; color: #E8EAED; }
+
+.modalOverlay {
+  position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex; justify-content: center; align-items: center; z-index: 1000;
+}
+
+.modalContent {
+  background-color: #292A2D;
+  padding: 30px;
+  border-radius: 8px;
+  width: 90%; max-width: 500px;
+  position: relative;
+  border: 1px solid #3C4043;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.closeButton {
+  position: absolute; top: 15px; right: 15px;
+  background: none; border: none;
+  font-size: 16px; color: #9AA0A6; cursor: pointer;
+}
+
+.closeButton:hover { color: #E8EAED; }
+
+.modalHeader { margin-bottom: 20px; border-bottom: 1px solid #3C4043; padding-bottom: 15px; }
+.modalHeader h2 { font-size: 20px; font-weight: 600; color: #E8EAED; margin-bottom: 5px; }
+.modalSubHeader { color: #9AA0A6; font-size: 13px; }
+
+.detalhesGrid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(90px, 1fr)); gap: 10px; margin-bottom: 20px;
+}
+
+.detalheItem {
+  background-color: #202124;
+  padding: 12px 8px;
+  border-radius: 6px;
+  display: flex; flex-direction: column; align-items: center;
+  border: 1px solid #3C4043;
+}
+
+.detalheIcone { width: 32px; height: 32px; margin-bottom: 8px; }
+.detalheNome { font-size: 11px; color: #9AA0A6; text-align: center; margin-bottom: 4px; }
+.detalheQtd { font-size: 13px; font-weight: 600; color: #E8EAED; }
+
+.modalResumoFinanceiro {
+  background-color: #202124;
+  border-radius: 6px; padding: 15px; border: 1px solid #3C4043;
+}
+
+.resumoLinha { display: flex; justify-content: space-between; font-size: 13px; color: #9AA0A6; margin-bottom: 8px; }
+.resumoLinha:last-child { margin-bottom: 0; padding-top: 10px; border-top: 1px solid #3C4043; color: #E8EAED; font-weight: 600; }

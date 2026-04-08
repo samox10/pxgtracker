@@ -1,0 +1,97 @@
+.container {
+  padding: 40px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #1a202c;
+}
+
+.formBox {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.inputGroup label {
+  font-weight: bold;
+  color: #4a5568;
+  font-size: 14px;
+}
+
+.input {
+  padding: 10px;
+  border: 1px solid #cbd5e0;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.row {
+  display: flex;
+  gap: 20px;
+}
+
+.row > div {
+  flex: 1;
+}
+
+.infoGastos {
+  background-color: #fffaf0;
+  border: 1px dashed #dd6b20;
+  color: #c05621;
+  padding: 15px;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.subInfo {
+  font-size: 12px;
+  color: #dd6b20;
+  margin-top: 5px;
+  opacity: 0.8;
+}
+
+.sectionTitle {
+  margin-top: 20px;
+  border-bottom: 2px solid #edf2f7;
+  padding-bottom: 10px;
+  color: #2d3748;
+}
+
+.lootGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.btnSubmit {
+  background-color: #805ad5; /* Cor roxa para diferenciar de Hunts normais */
+  color: white;
+  border: none;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: all 0.2s;
+}
+
+.btnSubmit:hover {
+  background-color: #6b46c1;
+}
